@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
-const { signup, signin, upload } = require('./controllers/controller');
 const dotenv = require('dotenv').config()
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const { connectDB } = require("./config/conn");
-const {Admin, Course} = require('./models/models');
-const auth = require('./authorization/auth');
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 

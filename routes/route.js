@@ -3,23 +3,23 @@ const router = express.Router();
 const {
     signup,
     signin,
-    createCourse,
-    upload,
-    getFeed,
+    // createCourse,
+    // upload,
+    // getFeed,
     getUser,
-    Subscribe
-} = require("../controllers/controller");
+    // Subscribe
+} = require("../controllers/UserController");
 const { auth } = require("../authorization/auth");
 
 router.route("/signup").post(signup);
 router.route("/signin").post(signin);
+router.route("/user/:id").get(getUser);
 
-router.route("/cc/:id").post(createCourse);
+// router.route("/cc/:id").post(createCourse);
 // router.route("/upload").post(auth, upload);
 
-router.route("/feed").get(getFeed);
-router.route("/user/:id").get(getUser);
-router.route("/user/subscribe/:id").post(Subscribe);
+// router.route("/feed").get(getFeed);
+// router.route("/user/subscribe/:id").post(Subscribe);
 
 
 

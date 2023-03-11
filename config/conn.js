@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connectDB = async () => {
-    const conn = mongoose.connect(`mongodb+srv://${process.env.MONGOU}:${process.env.MONGOP}@${process.env.MONGOC}.bqgmeka.mongodb.net/?retryWrites=true&w=majority/vidyavault`)
+    const conn = mongoose.connect(`mongodb+srv://${process.env.MONGOU}:${process.env.MONGOP}@${process.env.MONGOC}.bqgmeka.mongodb.net/vidyavault?retryWrites=true&w=majority`)
         .then(() => {
             console.log(`MongoDB connected`);
         })
