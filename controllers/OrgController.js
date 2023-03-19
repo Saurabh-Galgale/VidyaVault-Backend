@@ -1,13 +1,14 @@
 const { Course } = require("../models/Course");
 const { User } = require("../models/User");
 
-const updateOrg = async (req, res) => {
-    try {
+// working on it...
 
-    } catch (error) {
-        res.status(400).json({ status: false, message: "Something went wrong" });
-    }
-}
+// const updateOrg = async (req, res) => {
+//     try {
+//     } catch (error) {
+//         res.status(400).json({ status: false, message: "Something went wrong" });
+//     }
+// }
 
 // const subscribeCourse = async (req, res) => {
 

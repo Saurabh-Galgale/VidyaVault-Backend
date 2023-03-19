@@ -4,7 +4,6 @@ const { CourseFile } = require("../models/CourseFile");
 const addFile = async (req, res) => {
 
     try {
-
         const {
             moduleId,
             lecName,

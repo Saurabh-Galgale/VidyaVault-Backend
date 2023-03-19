@@ -196,4 +196,5 @@ let resetPass = async (req, res) => {
     }
 }
 
+
 module.exports = { signup, signin, getUser, updateUser, resetPassEmail, resetPass };

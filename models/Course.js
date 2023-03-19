@@ -14,6 +14,7 @@ const CourseSchema = new mongoose.Schema({
 { timestamps: true }
 );
 
+
 const Course = new mongoose.model("Course", CourseSchema);
 
 module.exports = { Course };

@@ -21,6 +21,7 @@ const {
     adminSignup,
     adminResetPass } = require("../controllers/AdminController");
 
+    
 // user routes
 router.route("/user/signup").post(signup);
 router.route("/user/signin").post(signin);

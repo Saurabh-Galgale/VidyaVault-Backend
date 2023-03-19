@@ -18,6 +18,7 @@ const CareerSchema = new mongoose.Schema({
 { timestamps: true }
 );
 
+
 const Career = new mongoose.model("Career", CareerSchema);
 
 module.exports = { Career };

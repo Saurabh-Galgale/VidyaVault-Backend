@@ -14,4 +14,5 @@ router.route("/user/subscribe/:id").post(auth, subscribeCourse);
 router.route("/user/cc/:id").post(auth, addUserCourse);
 router.route("/admin/cc/:id").post(auth, addAdminCourse);
 
+
 module.exports = router;

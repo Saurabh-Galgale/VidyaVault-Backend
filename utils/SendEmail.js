@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+
 const sendEmail = (receiver, subject, content) => {
     ejs.renderFile(__dirname + '/../views/Reset.ejs', { receiver, content }, (err, data) => {
         if (err) {

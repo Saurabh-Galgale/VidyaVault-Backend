@@ -9,3 +9,4 @@ const CourseFileSchema = new mongoose.Schema({
 const CourseFile = new mongoose.model("CourseFile", CourseFileSchema);
 
 module.exports = { CourseFile };
+

@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const { sendEmail } = require("../utils/SendEmail")
 const generateToken = require("../utils/generateToken");
 
+
 const adminSignup = async (req, res) => {
 
     const { name, email, password, orgName, description, goal, slogan } = req.body;

@@ -4,3 +4,4 @@ let ValidateEmail = function(email) {
 };
 
 module.exports = { ValidateEmail };
+

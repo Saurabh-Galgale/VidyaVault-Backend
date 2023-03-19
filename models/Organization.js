@@ -16,6 +16,7 @@ const OrganizationSchema = new mongoose.Schema({
     { timestamps: true }
 );
 
+
 const Organization = new mongoose.model("Organization", OrganizationSchema);
 
 module.exports = { Organization };
