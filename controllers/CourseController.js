@@ -45,14 +45,13 @@ const addUserCourse = async (req, res) => {
 
         // Binding everithing in here
         let file = await new CourseFile({
-            belongsTO: req.params.id,
-            courseId
+            courseId: courseId
         });
         file.courseData.push(CId)
         let fileSaved = await file.save();
 
 
-        if (!saved && !own && !mod ) {
+        if (!saved && !own && !mod && !fileSaved) {
             res.json({ message: "Not able to save Course!" });
         } else {
             res.json({
@@ -62,7 +61,8 @@ const addUserCourse = async (req, res) => {
         }
 
     } catch (error) {
-        res.status(400).json({ status: false, message: "Something went wrong" });
+        console.log(error.message);
+        res.status(400).json({ status: false, message: "Something went wrong", "Error": error.message });
     }
 }
 
@@ -90,7 +90,6 @@ const addAdminCourse = async (req, res) => {
 
         // saving course in organization
         let own = await Organization.findOneAndUpdate({ admin: req.params.id }, { $push: { courses: courseId } });
-        let orgId = own._id;
         own.courseCount += 1;
         let ownSaved = await own.save();
 
@@ -108,7 +107,6 @@ const addAdminCourse = async (req, res) => {
         // Binding everithing in here
         let file = await new CourseFile({
             belongsTO: req.params.id,
-            orgId, 
             courseId
         });
         file.courseData.push(CId)

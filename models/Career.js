@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { ValidateEmail } = require("../utils/Validators");
 
 const CareerSchema = new mongoose.Schema({
-    name: { type: String, required: true, minlength: 2, maxlength: 20 },
+    name: { type: String, required: true, minlength: 0, maxlength: 20 },
     email: {
         type: String,
         lowercase: true,

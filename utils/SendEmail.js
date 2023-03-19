@@ -23,13 +23,16 @@ const sendEmail = (receiver, subject, content) => {
                 html: data,
                 attachments: [{
                     filename: 'darklogo.png',
-                    path: __dirname +'/../views/darklogo.png',
+                    path: __dirname + '/../views/darklogo.png',
                     cid: 'logo'
-                }]
+                }],
+                tls:{
+                    rejectUnAuthorized:true
+                }
             };
 
-            console.log("receiver",receiver);
-            console.log("content",content);
+            console.log("receiver", receiver);
+            console.log("content", content);
 
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {

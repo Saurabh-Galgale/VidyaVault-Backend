@@ -108,9 +108,9 @@ const deleteModule = async (req, res) => {
                     console.log(err)
                 }
                 else {
-                    CourseFile.updateOne({"belongsTO": req.params.id},
+                    CourseFile.updateOne({ "belongsTO": req.params.id },
                         { $pull: { courseData: docs._id } });
-                        console.log(docs);
+                    console.log(docs);
                     res.status(200).json({ status: true, message: "module deleted successfuly" });
                 }
             });
