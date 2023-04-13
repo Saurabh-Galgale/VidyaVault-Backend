@@ -16,7 +16,7 @@ router.route("/module").post(auth, deleteModule);//
 
 
 router.route("/file").post(auth, addFile);//
-router.route("/file").post(auth, deleteFile);//
+router.route("/filedelete").post(auth, deleteFile);//
 
 
 module.exports = router;
